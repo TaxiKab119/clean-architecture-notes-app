@@ -1,4 +1,4 @@
-package com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case
+package com.plcoding.cleanarchitecturenoteapp.feature_note.presentation.add_edit_note.use_case
 
 /**
  * This is the class that we will inject into our viewModels
@@ -7,5 +7,6 @@ package com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case
 data class NoteUseCases(
     val getNotesUseCase: GetNotesUseCase,
     val deleteNoteUseCase: DeleteNoteUseCase,
-    val addNoteUseCase: AddNoteUseCase
+    val addNoteUseCase: AddNoteUseCase,
+    val getNoteUseCase: GetNoteUseCase
 )

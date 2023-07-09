@@ -18,6 +18,10 @@ interface NoteDao {
     @Query("SELECT * FROM note WHERE id = :id")
     suspend fun getNoteById(id: Int): Note?
 
+    /**
+     * When we insert a note with the same id as one that already exsists in the database
+     * it will just 'update' (replace) it instead
+     * */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertNote(note: Note)
 
